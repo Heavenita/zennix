@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zennix</title>
+</head>
+<body>
+    <form action="/inserir" method="POST">
+        <select data-placeholder="Escolha o tipo de template" name="tipo_internet" required>
+            <option value=""></option>
+            <option value="internet_padrao">Internet normal</option>
+            <option value="internet_padrao_mpls">Internet e MPLS</option>
+            <option value="internet_padrao_dmz">Internet e DMZ</option>
+          </select>
+        <br>
+        <br>
+        <label> Selecione as propiedades</label>
+        <br>
+        <input type="checkbox" name="propiedade" value="valido">
+        <label for="IP valido"> IP valido</label>
+        <input type="checkbox" name="propiedade" value="gerencia">
+        <label for="IP gerencia"> IP gerencia</label>
+        <input type="checkbox" name="propiedade" value="nomenclatura">
+        <label for="nomenclatura">Nomenclatura</label>
+        <br>
+        <br>
+        <br>
+        <input type="text" name="nome" required>
+        <br>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    {% if error %}
+        <script>alert("{{ error }}");</script>
+    {% endif %}
+</body>
+</html>

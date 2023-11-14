@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zennix</title>
+    <link rel="stylesheet" href="/static/CSS/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel='stylesheet'>
+</head>
+<body>
+    
+    <header class="header">
+        <a href="/lobby" class="logo">Zennix</a>
+        <nav class="links">
+            <a href="/lobby" class="active">Lobby</a>
+            <a href="/templates">Templates</a>
+            <a href="/cadastro">Cadastro</a>
+            <a href="/login">Login</a>
+        </nav>
+    </header>
+        <section class="section">
+            <div class="form-box">
+                <div class="form-value">
+                    <form action="/redefinir_senha" method="post">
+                        <h2>Redefinir Senha</h2>
+                        
+                        <div class="inputbox">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            <input type="password" required class="password" name="senha">
+                            <label for="">Nova senha</label>
+                        </div>
+
+                        <div class="inputbox">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            <input type="password" required class="confirm_password" name="confirmar_senha">
+                            <label for="">Confirme sua nova senha</label>
+                        </div>
+                        <button class="btn-confirma">Redefinir Senha</button>
+        
+                    </form>
+                </div>
+            </div>
+        </section>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        {% if alerta %}
+        <script>alert("{{ alerta }}");</script>
+        {% endif %}
+</body>
+</html>

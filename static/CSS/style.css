@@ -1,0 +1,634 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'); 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+body{
+    /*background: #081b29;*/
+    color: #000;
+
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 30px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo:hover{
+    color: #1ED760;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+
+}
+
+.navbar a:hover{
+    color: #1ED760
+}
+
+.links a {
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+
+}
+
+
+.links a:hover{
+    color: #1ED760;
+}
+
+.home {
+    height: 100vh;
+    background: url('/static/imagens/Bgrd.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+
+}
+
+.section {
+    height: 80vh;
+    background: url('/static/imagens/Fundo-esquerda.jpg');
+    background-size: cover;
+    width: 100%; 
+    margin: 0;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 6%;
+
+}
+.password{
+    color: #000;
+}
+
+.home-content{
+    max-width: 900px;
+    margin-right: 60%;
+    margin-bottom: 20px ;
+
+}
+
+.home-content h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000;
+}
+
+.home-content h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1ED760;
+    
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+    color: #000;
+}
+
+.home-content .btn-box {
+   display: flex;
+   justify-content: space-between ; 
+   width: 345px;
+   height: 50px;
+} 
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #1ED760;
+    border: 2px solid #1ED760;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+
+}
+
+.btn-box a:hover{
+    color: #1ED760;
+}
+
+.btn-box a:nth-child(2){
+    background: transparent;
+    color: #1ED760;
+}
+.btn-box a:nth-child(2):hover{
+    color: #fff;
+}
+
+.btn-box a:nth-child(2)::before{
+    background-color: #1ED760;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+    transition: .5s;
+
+}
+
+.btn-box a:hover:before{
+    width: 100%;
+}
+
+.home-sci{
+    position: absolute;
+    bottom: 220px; 
+    left: 190px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 63.5%;
+    margin-top: 90%;
+
+
+}
+
+.home-sci a{
+    position: relative;
+    z-index: 1000;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #1ED760;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #1ED760;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+
+}
+
+.home-sci a:hover{
+    color: #000;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #1ED760;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover:before{
+    width: 100%;
+
+}
+
+
+.imagem-fundo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: 0;
+    z-index: -1;
+    background-size: cover;
+
+
+}
+
+.form-box{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    display: flex;
+    justify-content:end;
+    align-items:center;
+    min-height: 110vh;
+    width: 96%;
+}
+
+.form-box{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    display: flex;
+    border: 2px rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+@font-face {
+    font-family: 'Poppins-Medio';
+    src: url('/static/Fonts/Poppins-Medium.ttf');
+}
+
+.form-value h2{
+    font-size: 2em;
+    color: #000;
+    text-align: center;
+    font-family: 'Poppins-Medio';
+}
+
+.inputbox  {
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #000;
+
+}
+
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%) ;
+    color: #000;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+
+}
+
+input:focus ~ label,
+input:valid ~ label{
+top: -5px;    
+}
+
+
+.inputbox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+    color: #000;
+}
+
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #000;
+    font: 1.2em;
+    top: 20px;
+
+}
+
+.forget{
+    margin: -15px 0 15px;
+    font-size: .8em ;
+    color  :#000;
+    display: flex;
+    justify-content: center;
+}
+
+.forget label input{
+    margin-right: 3px;
+
+}
+
+.forget label a{
+    color: #1ED760;
+    text-decoration: none;
+}
+.forget label a:hover{
+    text-decoration:  underline;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #1ED760;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.btn-confirma{
+    box-shadow: 0 5px #0daa44;
+}
+
+.forget{
+text-align: center;
+}
+
+.menu{
+    width: 100%;
+    height: 1080px;
+    background-color: #000;
+    box-shadow: #000 0px 0px 10px 0px;
+}
+.cabecalhoMenu{
+    width: 100%;
+    height: 80ox;
+    background-color: transparent;
+    
+}
+.cabecalhoMenu h2{
+    position: absolute;
+    top: 40px;
+    left: 120px;
+    color: #fff;
+    font-family: 'Poppins-medio';
+}
+.cabecalhoMenu p{
+    color: #fff;
+    font-size: small;
+    position: absolute;
+    top: 80px;
+    left: 120px;
+}
+.templates{
+    margin-top: 30px;
+    margin-left: 8px;
+}
+.templates button{
+    color: #fff;
+    background-color: #131212;
+    width: 90%;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+.templates button:hover{
+    color: #fff;
+    background-color: #383535;
+    width: 90%;
+    margin-left: 3%;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    transition: 0.8s;
+}
+
+.templates p{
+    color: #fff;
+    width: 50%;
+    margin-left: 5%;
+    border-radius: 4px;
+    font-size: 15px;
+    padding: 0px;
+}
+.templates h2{
+    color: #fff;
+    font-family: 'Poppins-Medio'; 
+    font-size: 25px;
+}
+.templates h2:hover{
+    color: #1ED760;
+    transition: 0.5s;
+}
+.equipamentos{
+    margin-left: 8px;
+}
+.equipamentos h2{
+    color: #fff;
+    font-size: 25px;
+    margin-top: 30px;
+}
+.equipamentos h2:hover{
+    color: #1ED760;
+    transition: 0.5s;
+}
+
+.equipamentos input{
+    width: 65%;
+    margin-bottom: 20px;
+}
+
+.pesquisaMac {
+    color: #fff ;
+    margin-left: 5%;
+}
+.equipamentos p{
+    margin-left: 8%;
+    color:#fff;
+}
+.configs{
+    width: 80%;
+    height: 800px;
+    background-color: transparent;
+
+}
+.configs button{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    background-color: transparent;
+}
+.configs img{
+    width: 100%;
+    margin: 10% 20% 20% 15%;
+    position: sticky;
+    filter:blur();
+}
+.configs h1{
+    padding-top: 25px;
+    color: #000;
+}
+.traco{
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    border-radius: 3px;
+}
+
+.tracoVerde{
+    width: 40%;
+    height: 3px;
+    background-color: #1ED760;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+.configs p{
+    color: #000;
+    margin-top: 10px;
+    font-size: 20px;
+
+}
+.nomeTemplate p{
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #000;
+}
+
+.nomeTemplate{
+    width: 50%;
+    margin-top: 15px;
+    font-size: 20px;
+    color: #000;
+    
+}
+.nomenclatura{
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+.nomenclatura p{
+    margin-bottom: 5px;
+}
+.nomenclatura select{
+    margin-bottom: 15px;
+}
+
+.Gateway{
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+.Gateway p{
+    margin-bottom: 5px;
+}
+.Gateway select{
+    margin-bottom: 15px;
+}
+.SSH{
+    margin-top: 10px;
+}
+.form-control{
+    margin-top: 10px;
+}
+#acessos{
+    margin-top: 50px;
+}
+
+.btn-primary{
+    background-color: #1ED760;
+}
+
+.btn-search{
+    width: 30%;
+    margin-top: 10px;
+    
+}
+
+.btn-search:hover{
+    background-color: #1ED760 !important; 
+    color: #000 !important;
+}
+
+.search-bar{
+    width: 90% !important;
+    margin-left: 10px !important;
+}
+
+.btn-gerar-codigo{
+    background-color: #1ED760 !important;
+    color: #000 !important;
+    border-color: #000 !important;
+}
+
+.btn-gerar-codigo:hover{
+    background-color: #1bb952 !important; 
+    color: #000 !important;
+}
+
+.caixacopia{
+    border-radius: 10px 10px 0px 0px;
+    background-color: #343541;
+    height: 60px;
+    margin-top: 15px;
+    margin-bottom: -15px;
+    display: flex;
+    
+}
+.caixaDeCodigo{
+    align-items: left;
+    background-color: #000;
+    border-radius: 0px 0px 10px 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+.caixaDeCodigo p {
+    font-size: 18px;
+    color: #fff;
+}
+.caixacopia p{
+    font-size: 16px;
+    color: #fff;
+    padding-left: 20px;
+    
+
+}
+.copiar svg{
+    color: #fff;
+    float: right;
+}
+.btncopiar{
+    background-color: blue !important;
+    
+}
+.iconeCopia{
+    color: #fff;
+    position: block;
+}
+
+#input{
+    width: 100%;
+    height: 700px;
+    background-color: transparent;
+    color: #fff;
+    border-color: transparent;
+}

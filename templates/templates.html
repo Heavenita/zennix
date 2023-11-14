@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zennix</title>
+    <link rel="stylesheet" href="/static/CSS/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="menu">
+                
+                <div class="cabecalhoMenu">
+                    <a href="/lobby"><img src="/static/imagens/LogoZennix.png" alt="Logo-Zennix"></a>
+                    <h2>Zennix</h2>
+
+                    <p>Configurações Mikrotik</p>
+                </div>
+
+                <div class="">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2 search-bar" type="search" placeholder="Pesquisar template" aria-label="Search" id="searchInput" oninput="searchCards()">
+                      </form>
+                </div>
+
+                <div class="templates">
+                    <h2>Templates</h2>
+                    <div class="tracoVerde"></div>
+                    <a href="/lobby"><button>Criar templates</button></a>
+                    <a href="/excluir"><button>Excluir template</button></a>
+                </div>
+                <div class="templates">
+                    <h2>Configurações</h2>
+                    <div class="tracoVerde"></div>
+                    <a href="/redefinir_senha"><button>Redefinir Senha</button></a>
+                    <a href="/logout"><button>Logout</button></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                {% for template in templates %}
+                <div class="col-md-4 carde">
+                    <div></div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ template }}</h5>
+                            <p class="card-text">Utilizar o template {{ template }}</p>
+                            <a href="/lobby/{{template}}" class="btn btn-primary btn-gerar-codigo">Gerar codigo</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script>
+            function searchCards() {
+                var input, filter, cards, card, i;
+                input = document.getElementById('searchInput');
+                filter = input.value.toUpperCase();
+                cards = document.querySelectorAll('.carde');
+            
+                for (i = 0; i < cards.length; i++) {
+                    card = cards[i];
+                    card.style.display = 'block';
+                }
+            
+                if (filter.trim() === '') {
+                    
+                    return;
+                }
+            
+                for (i = 0; i < cards.length; i++) {
+                    card = cards[i];
+                    var cardTitle = card.querySelector('.card-title');
+                    var txtValue = cardTitle.textContent || cardTitle.innerText;
+            
+                    if (txtValue.toUpperCase().indexOf(filter) === -1) {
+                        card.style.display = 'none'; 
+                    }
+                }
+            }
+            </script>               
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
