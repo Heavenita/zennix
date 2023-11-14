@@ -120,7 +120,7 @@ def lobby():
             elif (request.form.getlist('propiedade') == []) and (enviar != 'Criar'):
                 return render_template('lobby.html')
             else:
-                return render_template('lobby.html', alerta='Error: Propiedades não foram selecionadas!!')
+                return render_template('lobby.html', alerta='Error: Propiedades não foram selecionadas!')
         return render_template('lobby.html')
     except:
         return render_template('lobby.html', alerta='Erro ao inserir dados!')
