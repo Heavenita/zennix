@@ -1,6 +1,6 @@
 # zennix
-Projeto desenvolvido pelos alunos Luis Paulo dos Santos Pereira e Pedro Henrique Rossi \n
+Projeto desenvolvido pelos alunos Luis Paulo dos Santos Pereira e Pedro Henrique Rossi 
 
-Turma INF4T \n
+Turma INF4T 
 
-IFSUL - Campus Sapiranga \n
+IFSUL - Campus Sapiranga 
