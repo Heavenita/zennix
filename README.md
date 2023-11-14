@@ -1,5 +1,5 @@
 # zennix
-Projeto desenvolvido pelos alunos Luis Paulo dos Santos Pereira e Pedro Henrique Rossi 
+Projeto desenvolvido pelos alunos Luis Paulo e Pedro Rossi 
 
 Turma INF4T 
 
